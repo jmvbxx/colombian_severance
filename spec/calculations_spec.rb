@@ -1,4 +1,4 @@
-require_relative 'calculations'
+require_relative '../calculations'
 
 describe Calculations do
   before do
