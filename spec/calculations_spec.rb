@@ -2,7 +2,11 @@ require_relative '../calculations'
 
 describe Calculations do
   before do
-    @employee = Calculations.new(1_000_000, 180)
+    @employee = Calculations.new(1_000_000, '2020-01-01', '2020-06-29')
+  end
+
+  it 'computes the correct number of days' do
+    expect(@employee.days_worked).to eq(180)
   end
 
   it 'computes the correct bonuses' do
