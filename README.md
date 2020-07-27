@@ -1,2 +1,2 @@
-# liquidacion
-To calculate the payroll taxes for Colombian employee in ruby
+# Colombian Severance
+To calculate Colombian severance for a Colombian employee in ruby
