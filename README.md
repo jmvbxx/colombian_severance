@@ -1,4 +1,25 @@
 [![Build Status](https://travis-ci.com/jmvbxx/colombian_severance.svg?branch=master)](https://travis-ci.com/jmvbxx/colombian_severance)
 [![Coverage Status](https://coveralls.io/repos/github/jmvbxx/colombian_severance/badge.svg?branch=master)](https://coveralls.io/github/jmvbxx/colombian_severance?branch=master)
 # Colombian Severance
-To calculate severance for a Colombian employee in ruby
+The purpose of this program is to calculate the severance that would be due to
+a Colombian employee based on current law. 
+
+## Usage
+```ruby
+employee = Calculations.new(958730, '2020-01-01', '2020-03-21')
+puts "Total severance due for #{employee.days_worked} days worked:"
+puts "\tBonuses: #{employee.bonuses}"
+puts "\tSavings: #{employee.savings}"
+puts "\tInterest on savings: #{employee.interest_on_savings}"
+puts "\tVacation: #{employee.vacation}"
+puts "\tTotal: #{employee.total}"
+```
+The method takes three parameters:
+* Salary
+* Start date (format: year-month-day Ex. 2020-07-20)
+* End date (same format as above)
+
+The default values for the parameters are:
+* Salary: $1,000,000 COP
+* Start date: 2020-01-01
+* End date: 2020-06-29
