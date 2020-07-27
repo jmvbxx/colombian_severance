@@ -20,6 +20,6 @@ The method takes three parameters:
 * End date (same format as above)
 
 The default values for the parameters are:
-* Salary: $1,000,000 COP
+* Salary: $1,000,000 COP (in [USD](https://www.xe.com/currencyconverter/convert/?Amount=1%2C000%2C000&From=COP&To=USD))
 * Start date: 2020-01-01
 * End date: 2020-06-29
