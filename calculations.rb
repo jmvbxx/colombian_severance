@@ -21,7 +21,7 @@ class Calculations
   end
 
   def interest_on_savings
-    (savings * days_worked * 0.12) / 360
+    ((savings * days_worked * 0.12) / 360).round
   end
 
   def vacation
@@ -29,6 +29,6 @@ class Calculations
   end
 
   def total
-    bonuses + savings + interest_on_savings + vacation
+    (bonuses + savings + interest_on_savings + vacation).round
   end
 end
