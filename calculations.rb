@@ -2,7 +2,6 @@ require 'date'
 
 # collections of payroll calculations according to Colombian law
 class Calculations
-
   MINIMUM_WAGE = 877_803
 
   def initialize(salary: MINIMUM_WAGE, start_date: '2020-01-01', end_date: '2020-06-29')
