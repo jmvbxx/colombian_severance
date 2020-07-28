@@ -8,7 +8,7 @@ puts "\tInterest on savings: #{employee1.interest_on_savings}"
 puts "\tVacation: #{employee1.vacation}"
 puts "\tTotal: #{employee1.total}"
 
-employee2 = Calculations.new(958730, '2020-01-01', '2020-03-21')
+employee2 = Calculations.new(salary: 958_730, start_date: '2020-01-01', end_date: '2020-03-21')
 puts "Total severance due for #{employee2.days_worked} days worked:"
 puts "\tBonuses: #{employee2.bonuses}"
 puts "\tSavings: #{employee2.savings}"

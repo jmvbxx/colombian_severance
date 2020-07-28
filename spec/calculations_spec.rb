@@ -2,7 +2,7 @@ require_relative '../calculations'
 
 describe Calculations do
   before do
-    @employee = Calculations.new(1_000_000, '2020-01-01', '2020-06-29')
+    @employee = Calculations.new(salary: 1_000_000, start_date: '2020-01-01', end_date: '2020-06-29')
   end
 
   it 'computes the correct number of days' do
