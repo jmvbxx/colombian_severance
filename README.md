@@ -7,12 +7,7 @@ a Colombian employee based on current law.
 ## Usage
 ```ruby
 employee = Calculations.new(salary: 958_730, start_date: '2020-01-01', end_date: '2020-03-21')
-puts "Total severance due for #{employee.days_worked} days worked:"
-puts "\tBonuses: #{employee.bonuses}"
-puts "\tSavings: #{employee.savings}"
-puts "\tInterest on savings: #{employee.interest_on_savings}"
-puts "\tVacation: #{employee.vacation}"
-puts "\tTotal: #{employee.total}"
+employee.to_s
 ```
 The method takes three parameters:
 * Salary
