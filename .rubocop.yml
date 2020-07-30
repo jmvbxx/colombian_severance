@@ -1,4 +1,4 @@
-Layout/LineLength:
+Metrics/LineLength:
   Max: 110
 
 Style/BlockComments:
