@@ -9,6 +9,16 @@ a Colombian employee based on current law.
 employee = Calculations.new(salary: 958_730, start_date: '2020-01-01', end_date: '2020-03-21')
 employee.to_s
 ```
+
+## Output
+```bash
+Total severance due for 80 days worked at $958730:
+	Bonuses: 213051
+	Savings: 213051
+	Interest on savings: 5681
+	Vacation: 106525
+	Total: 538308
+```
 The method takes three parameters:
 * Salary
 * Start date (format: year-month-day Ex. 2020-07-20)
