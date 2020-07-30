@@ -14,7 +14,7 @@ class Calculations
   end
 
   def to_s
-    puts "Total severance due for #{days_worked} days worked:"
+    puts "Total severance due for #{days_worked} days worked at $#{salary}:"
     puts "\tBonuses: #{bonuses}"
     puts "\tSavings: #{savings}"
     puts "\tInterest on savings: #{interest_on_savings}"
