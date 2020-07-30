@@ -1,7 +1,9 @@
 require 'date'
 
-# collections of payroll calculations according to Colombian law
+# collection of payroll calculations according to Colombian law
 class Calculations
+  attr_reader :salary, :start_date, :end_date
+
   MINIMUM_WAGE = 877_803
 
   def initialize(salary: MINIMUM_WAGE, start_date: '2020-01-01', end_date: '2020-06-29')
@@ -11,11 +13,11 @@ class Calculations
   end
 
   def days_worked
-    Integer(Date.parse(@end_date) - Date.parse(@start_date))
+    Integer(Date.parse(end_date) - Date.parse(start_date))
   end
 
   def bonuses
-    (@salary * days_worked) / 360
+    (salary * days_worked) / 360
   end
 
   def savings
@@ -27,7 +29,7 @@ class Calculations
   end
 
   def vacation
-    (@salary * days_worked) / 720
+    (salary * days_worked) / 720
   end
 
   def total
