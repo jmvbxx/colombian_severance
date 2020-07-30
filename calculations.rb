@@ -1,4 +1,5 @@
 require 'date'
+require 'logger'
 
 # collection of payroll calculations according to Colombian law
 class Calculations
@@ -10,6 +11,15 @@ class Calculations
     @salary = salary
     @start_date = start_date
     @end_date = end_date
+  end
+
+  def to_s
+    puts "Total severance due for #{days_worked} days worked:"
+    puts "\tBonuses: #{bonuses}"
+    puts "\tSavings: #{savings}"
+    puts "\tInterest on savings: #{interest_on_savings}"
+    puts "\tVacation: #{vacation}"
+    puts "\tTotal: #{total}"
   end
 
   def days_worked
