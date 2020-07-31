@@ -6,10 +6,10 @@ class Calculations
 
   MINIMUM_WAGE = 877_803
 
-  def initialize(salary: MINIMUM_WAGE, start_date: '2020-01-01', end_date: '2020-06-29')
-    @salary = salary
-    @start_date = start_date
-    @end_date = end_date
+  def initialize(args)
+    @salary     = args[:salary] || MINIMUM_WAGE
+    @start_date = args[:start_date]
+    @end_date   = args[:end_date]
   end
 
   def to_s
