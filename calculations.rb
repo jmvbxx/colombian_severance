@@ -1,5 +1,4 @@
 require 'date'
-require 'logger'
 
 # collection of payroll calculations according to Colombian law
 class Calculations

@@ -7,11 +7,11 @@ a Colombian employee based on current law.
 ## Usage
 ```ruby
 employee = Calculations.new(salary: 958_730, start_date: '2020-01-01', end_date: '2020-03-21')
-employee.to_s
+logger.info(employee.to_s)
 ```
 
 ## Output
-```bash
+```text
 Total severance due for 80 days worked at $958730:
 	Bonuses: 213051
 	Savings: 213051
