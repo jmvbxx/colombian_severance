@@ -24,7 +24,5 @@ The method takes three parameters:
 * Start date (format: year-month-day Ex. 2020-07-20)
 * End date (same format as above)
 
-The default values for the parameters are:
+The only default parameter is:
 * Salary: $877,803 COP (in [USD](https://www.xe.com/currencyconverter/convert/?Amount=877%2C803&From=COP&To=USD))
-* Start date: 2020-01-01
-* End date: 2020-06-29
