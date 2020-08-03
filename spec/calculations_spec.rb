@@ -1,31 +1,9 @@
 require_relative '../calculations'
 
-describe Calculations do
-  before do
-    @employee = Calculations.new(salary: 1_000_000, start_date: '2020-01-01', end_date: '2020-06-29')
-  end
+RSpec.describe Calculations do
+  let(:employee) { Calculations.new(salary: 1_000_000, start_date: '2020-01-01', end_date: '2020-06-29') }
 
-  it 'computes the correct number of days' do
-    expect(@employee.days_worked).to eq(180)
-  end
-
-  it 'computes the correct bonuses' do
-    expect(@employee.bonuses).to eq(500_000)
-  end
-
-  it 'computes the correct savings' do
-    expect(@employee.savings).to eq(500_000)
-  end
-
-  it 'computes the correct interest on savings' do
-    expect(@employee.interest_on_savings).to eq(30_000)
-  end
-
-  it 'computes the correct vacation' do
-    expect(@employee.vacation).to eq(250_000)
-  end
-
-  it 'computes the correct total owing' do
-    expect(@employee.total).to eq(1_280_000)
+  it 'provides the correct output' do
+    expect(employee.to_s).to eq('Total severance due for 180 days worked at $1000000: Bonuses: 500000 Savings: 500000 Interest on savings: 30000 Vacation: 250000 Total: 1280000')
   end
 end
