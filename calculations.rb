@@ -13,13 +13,10 @@ class Calculations
   end
 
   def to_s
-    puts "Total severance due for #{days_worked} days worked at $#{salary}:"
-    puts "\tBonuses: #{bonuses}"
-    puts "\tSavings: #{savings}"
-    puts "\tInterest on savings: #{interest_on_savings}"
-    puts "\tVacation: #{vacation}"
-    puts "\tTotal: #{total}"
+    "Total severance due for #{days_worked} days worked at $#{salary}: Bonuses: #{bonuses} Savings: #{savings} Interest on savings: #{interest_on_savings} Vacation: #{vacation} Total: #{total}"
   end
+
+  private
 
   def days_worked
     Integer(Date.parse(end_date) - Date.parse(start_date))
