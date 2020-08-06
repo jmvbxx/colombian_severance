@@ -10,6 +10,10 @@ class SeveranceCalculator
     @salary     = args[:salary] || MINIMUM_WAGE
     @start_date = args[:start_date]
     @end_date   = args[:end_date]
+
+    raise ArgumentError.new('Salary must be greater than zero') if salary < 1
+    raise ArgumentError.new('January 1, 2020 is the earliest possible date') if Date.parse(start_date) < Date.parse('2020-01-01')
+    raise ArgumentError.new('The end date needs to be after the start date') if Date.parse(end_date) <= Date.parse(start_date)
   end
 
   def to_s
@@ -17,27 +21,6 @@ class SeveranceCalculator
   end
 
   private
-
-  def salary=(salary)
-    if salary < 1
-      raise ArgumentError.new('Salary must be greater than zero')
-    end
-    @salary = salary
-  end
-
-  def start_date=(start_date)
-    if start_date < '2020-01-01'
-      raise ArgumentError.new('January 1, 2020 is the earliest possible date')
-    end
-    @start_date = start_date
-  end
-
-  def end_date=(end_date)
-    if end_date < (start_date + 1)
-      raise ArgumentError.new('The end date needs to be after the start date')
-    end
-    @end_date = end_date
-  end
 
   def days_worked
     Integer(Date.parse(end_date) - Date.parse(start_date))
