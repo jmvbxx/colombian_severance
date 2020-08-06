@@ -1,7 +1,7 @@
 require 'date'
 
 # collection of payroll calculations according to Colombian law
-class Calculations
+class SeveranceCalculator
   attr_reader :salary, :start_date, :end_date
 
   MINIMUM_WAGE = 877_803
